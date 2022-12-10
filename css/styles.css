@@ -1,0 +1,191 @@
+body{
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+p{
+  color: #8f8f8f;
+}
+
+/* Containers */
+
+.container-fluid{
+  padding: 7% 15%;
+}
+
+/* Sections */
+
+.colored-section{
+  background-color: #ff4c68;
+  color: white;
+}
+
+.white-section{
+  background-color: white;
+}
+
+/* Headings */
+
+.big-heading{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 900;
+  line-height: 1.5;
+}
+
+.section-heading{
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+/* Navigation Bar */
+
+.navbar{
+  padding: 0 0 4.5rem;
+}
+
+.navbar-brand{
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.nav-item{
+  padding: 0 18px;
+}
+
+.nav-link{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 100;
+}
+/* Download Buttons */
+
+.download-button{
+  margin: 5% 3% 5% 0;
+}
+
+/* Title section */
+/* #fff is white #000 is black */
+/* For the container-fluid in our title section. because this rule is more specific, */
+/* it overrides the simple container-fluid */
+
+#title .container-fluid{
+  padding: 3% 15% 7%;
+  text-align: left;
+}
+/* Title Image */
+
+.title-image{
+  width: 60%;
+  transform: rotate(25deg);
+  position: absolute;
+  right: 30%;
+}
+
+/* This is necessary because since bootstrap 5 the col class don't have position:relative but position: absolute.  */
+ /* Elements with position: absolute; are positioned according to a container that has been given a position.  */
+ /* None of the containers the image is nested in have a position, so it is being positioned relative to the HTML element.  */
+ /* Thus causing the 60% width to scale relative to the size of the entire page and not the div the image is in */
+
+.title-image-container{
+  position: relative;
+}
+
+/* Features Section */
+#features{
+  position: relative;
+/* No need to put an z-index here because elements that come later in the HTML flow are on top, even if they don't have an z-index */
+}
+
+.feature-title{
+  font-size: 1.5rem;
+    margin: 20px auto 10px;
+}
+
+.col-features{
+  margin: 0 auto;
+  padding: 4%;
+}
+
+.icon-features{
+  color: #ef8172;
+
+}
+.icon-features:hover{
+  color: #ff4c68;
+}
+
+.text-features{
+  margin: 0 auto 1rem;
+}
+
+/* Testimonials Section */
+
+#testimonials{
+  background-color: #ef8172;
+}
+
+.testimonial-text{
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+.testimonial-image{
+  border-radius: 100%;
+  margin: 20px;
+  width: 10%;
+}
+
+/* Press Section */
+
+#press{
+background-color: #ef8172;
+padding-bottom: 3%;
+}
+
+.press-logo{
+  width: 15%;
+  margin: 20px 20px 50px;
+}
+
+/* Price Section */
+
+#pricing{
+  padding: 100px;
+}
+
+.pricing-column{
+  padding: 3% 2%;
+}
+.price-text{
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+/* Footer Section */
+
+.footer-icon{
+  margin: 20px 10px;
+}
+
+/* Media query Section.
+/* Media Queries work when you place them below the selector you change ==> place them at the bottom */
+
+@media (max-width: 1028px){
+
+  #title{
+    text-align: center;
+  }
+
+.title-image{
+  position: static;
+  transform: rotate(0);
+}
+
+}
